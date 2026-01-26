@@ -1,18 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
 
-
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@theme {
+  --color-primary: #ffc045;     /* Jaune Fromage */
+  --color-secondary: #3d2514;   /* Brun Pain Grillé / Viande */
+  --color-red-primary: #bf2222; /* Rouge Ketchup / Alerte */
+  
+  --font-Alfa: "Alfa Slab One", serif;
+  --font-Roboto: "Roboto", sans-serif;
 }
-
-
