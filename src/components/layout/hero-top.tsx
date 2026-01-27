@@ -7,33 +7,50 @@ import Header from './header';
 
 function HeroTop() {
     return (
-        <div className="bg-primary w-full h-screen">
+        <div className="bg-primary w-full ">
            <div 
            style={{backgroundImage: `url(${bgFood})`}}
-           className="bg-bg-food w-full h-full bg-center bg-repeat ..."
+           className="bg-bg-food w-full pb-29 bg-center bg-repeat ..."
            >
             <Container>
                 < Header/>
 
-                <div className='w-full relative mt-28'>
+                <div className='w-full relative mt-30'>
                    <img src={burgerHeroTop} alt="Menu burger avec frites et coca cola." className='z-0 absolute -top-64 right-0 w-6/12'/>
+                    
+                    <div className='absolute top-45 right-90 bg-red-primary w-40 h-40 rounded-full p-3'>
+                        <div className='w-full h-full rounded-full text-white border-2 border-dashed border-white flex justify-center items-center'>
+                            <div className='text-center'>
+                                <span className='block font-extrabold '>
+                                    <span className='text-6xl'>5</span>
+                                    .49$
+                                </span>
+                                 
 
+                                <span className='tracking-widest uppercase text-sm'>seulement</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
                     <div className='relative  text-secondary uppercase  px-4 py-8 '>
                         <h1 className='mb-4 font-semibold '>
                             c'est le moment de goûter à l'excellence des Hamburgers ! 
                         </h1>
 
-                        <h2 className='font-Alfa font-bold '>
-                            <span className='text-8xl block'>Burger</span>
+                        <h2 className='font-Alfa font-bold text-shadow-xl'>
+                            <span className='text-8xl block  '>Burger</span>
                              <span className='text-6xl mr-3'>House</span> 
                              <span className='text-4xl'>Click <span className='text-red-primary'>&</span> Collect</span>  
                         </h2>
                     </div>
                 </div>
-                <Button className={'bg-secondary mt-5'} theme='big'>
+                <Button className={' mt-5'} theme='big' color='secondary'>
                     Créer mon compte
                 </Button>
-                
+
+         
+
             </Container>
            </div>
             

@@ -13,18 +13,18 @@ function Header() {
                 
                 <div className='flex items-center justify-end gap-1.5'>
                     <img src={iconBag} alt="icon bag" className='w-5 h-5' />
-                    <span className="text-secondary  text-sm md:text-base lg:text-lg">
+                    <span className="text-secondary text-sm">
                         Commandez votre repas en ligne et profitez de la livraison rapide ! 
                     </span>
                 </div>
 
                 <div className='flex items-center justify-center gap-3 mt-8'>
 
-                    <Button className={'bg-primary tracking-wider'}>
+                    <Button className={' tracking-wider'}>
                         Inscription
                     </Button>
 
-                    <Button className={'bg-secondary'}>
+                    <Button color='secondary' >
                         Connexion
                     </Button>
                 </div>

@@ -1,16 +1,31 @@
 interface ButtonProps {
   children: React.ReactNode;
   className?: string; 
-  theme?: 'big' | 'small'; // On définit le type ici
+  theme?: 'big' | 'small';
+  color?: 'primary' | 'secondary'| 'danger';
 }
 
-function Button({ children, className, theme }: ButtonProps) {
-    
+function Button({ children, className, theme, color }: ButtonProps) {
+    let background;
+
+   switch (color) {
+    case 'secondary':
+        background = 'bg-secondary hover:bg-secondary-hover';
+        break;
+    case 'danger':
+        background = 'bg-red-primary hover:bg-red-primary-hover';
+        break;
+   
+    default:
+         background = 'bg-primary hover:bg-primary-hover';
+        break;
+   }
+
     switch (theme) {
         case 'small':
             return (
-          <button className={ ` font-Roboto px-4 py-2 text-sm
-           text-white rounded-2xl  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold hover:border-2 border-white ${className}`}>
+          <button className={ ` font-Roboto px-4 py-3 text-sm
+           text-white rounded-md  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold ${className} ${background}`}>
               {children}
           </button>
             );                  
@@ -20,7 +35,7 @@ function Button({ children, className, theme }: ButtonProps) {
 
             return (
           <button className={ ` font-Roboto px-8 py-4 text-base
-           text-white rounded-sm  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold tracking-wider hover:border-2 border-white ${className}`}>
+           text-white rounded-md  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold tracking-wider  ${className} ${background}`}>
               {children}
           </button>
             );                  
@@ -29,7 +44,7 @@ function Button({ children, className, theme }: ButtonProps) {
         default:
             return (
         <button className={ ` font-Roboto px-5 py-3 text-sm
-         text-white rounded-sm  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold tracking-wider hover:border-2 border-white ${className}`}>
+         text-white rounded-md  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold tracking-wider ${className} ${background}`}>
             {children}
         </button>
     );

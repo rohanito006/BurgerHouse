@@ -3,9 +3,15 @@
 
 @theme {
   --color-primary: #ffc045;     /* Jaune Fromage */
+  --color-primary-hover: #e6ac3c; /* Jaune Fromage Foncé */
+  
   --color-secondary: #3d2514;   /* Brun Pain Grillé / Viande */
+  --color-secondary-hover: #231105; 
   --color-red-primary: #bf2222; /* Rouge Ketchup / Alerte */
+  --color-red-primary-hover: #9e1b1b; /* Rouge Ketchup Foncé */
   
   --font-Alfa: "Alfa Slab One", serif;
   --font-Roboto: "Roboto", sans-serif;
+
+  --text-shadow-xl: 3px 3px #fee7ba;
 }
