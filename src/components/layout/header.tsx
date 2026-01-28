@@ -12,8 +12,8 @@ function Header() {
             <div className='w-full font-Roboto'>
                 
                 <div className='flex items-center justify-end gap-1.5'>
-                    <img src={iconBag} alt="icon bag" className='w-5 h-5' />
-                    <span className="text-secondary text-sm">
+                    <img src={iconBag} alt="icon bag" className='w-5 h-5 animate-pulse' />
+                    <span className="text-secondary text-md">
                         Commandez votre repas en ligne et profitez de la livraison rapide ! 
                     </span>
                 </div>
