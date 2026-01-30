@@ -6,7 +6,6 @@ function Event() {
 
     const handleDragStart = (e: React.DragEvent<HTMLImageElement>) =>
     e.preventDefault();
-    
         const items = [
 	         <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
 	         <img src="path-to-img" onDragStart={handleDragStart} role="presentation" />,
