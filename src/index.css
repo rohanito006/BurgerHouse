@@ -15,3 +15,12 @@
 
   --text-shadow-xl: 3px 3px #fee7ba;
 }
+
+body{
+  font-family: var(--font-Roboto);
+  @apply text-secondary;
+}
+
+p{
+  @apply mb-4;
+}
