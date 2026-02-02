@@ -1,23 +1,26 @@
 import { useEffect, useState } from "react";
 import Container from "./container";
 
-import image1 from "../../assets/images/products/burger1.png";
+import image1 from "../../assets/images/photos/wordCup.jfif";
 import image2 from "../../assets/images/products/burger3.png";
 import image3 from "../../assets/images/products/burger4.png";
 
 const slides = [
   {
-    title: "Le Burger Classique",
+    title: "Vivez la qualification à la coupe du monde",
+    category: "événement à venir",
     text: "Bonjour",
     image: image1,
   },
   {
     title: "Le Burger Fromage",
+    category: "événement à venir",
     text: "Bonsoir",
     image: image2,
   },
   {
     title: "Le Burger Spicy",
+    category: "événement à venir",
     text: "Bon après-midi",
     image: image3,
   },
@@ -53,6 +56,11 @@ function Event() {
 
         {/* TEXTE */}
         <div className="w-1/2 flex flex-col justify-center items-center px-10 text-center">
+
+          <p>
+              {slides[currentIndex].category}
+          </p>
+
           <h2 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">
             {slides[currentIndex].title}
           </h2>
@@ -76,7 +84,7 @@ function Event() {
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="w-72 h-72 object-contain"
+                  className="w-full object-contain"
                 />
               </div>
             ))}
