@@ -9,7 +9,7 @@ const slides = [
   {
     title: "Vivez la qualification à la coupe du monde",
     category: "événement à venir",
-    text: "Bonjour",
+    text: "Rejoignez-nous pour une soirée électrique ! Ne manquez rien du match décisif sur écran géant. Ambiance de stade garantie, menu spécial supporters et boissons fraîches pour vibrer ensemble jusqu'au coup de sifflet final. Allez les léopard !",
     image: image1,
   },
   {
@@ -33,7 +33,7 @@ function Event() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000);
+    }, 4000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
@@ -61,7 +61,7 @@ function Event() {
               {slides[currentIndex].category}
           </p>
 
-          <h2 className="text-3xl md:text-4xl font-bold text-amber-800 mb-4">
+          <h2 className="text-3xl md:text-4xl font-Alfa text-amber-800 mb-4">
             {slides[currentIndex].title}
           </h2>
 
@@ -79,7 +79,7 @@ function Event() {
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="w-full h-full shrink-0 flex items-center justify-center"
+                className="w-full shrink-0 flex items-center justify-center"
               >
                 <img
                   src={slide.image}
