@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Container from "./container";
 
 import image1 from "../../assets/images/photos/wordCup.jfif";
-import image2 from "../../assets/images/products/burger3.png";
-import image3 from "../../assets/images/products/burger4.png";
+import image2 from "../../assets/images/photos/télécharger (4).jfif";
+import image3 from  "../../assets/images/photos/Crispy Chicken Bacon Cheeseburger with BBQ Sauce and Tomato.jfif";
 
 const slides = [
   {
@@ -13,9 +13,11 @@ const slides = [
     image: image1,
   },
   {
-    title: "Le Burger Fromage",
+    title: "Journée spéciale des Frites",
     category: "événement à venir",
-    text: "Bonsoir",
+    text: `À l’occasion de la Journée spéciale des Frites, Le Burger Fromage est à l’honneur !
+          Savoure un burger fondant accompagné de frites dorées et croustillantes.
+          Une journée, une saveur, à ne pas manquer`,
     image: image2,
   },
   {
@@ -73,18 +75,18 @@ function Event() {
         {/* IMAGE */}
         <div className="relative w-1/2 overflow-hidden">
           <div
-            className="flex h-full transition-transform duration-500 ease-in-out"
+            className="flex h-full transition-transform duration-500 ease-in-out bg-amber-900"
             style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {slides.map((slide, index) => (
               <div
                 key={index}
-                className="w-full shrink-0 flex items-center justify-center"
+                className="w-full h-full shrink-0 flex items-center justify-center"
               >
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="w-full object-contain"
+                  className="w-full object-cover object-bottom "
                 />
               </div>
             ))}

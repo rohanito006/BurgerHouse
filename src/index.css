@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@plugin "@tailwindcss/forms";
 @import "tailwindcss";
+
 
 @theme {
   --color-primary: #ffc045;     /* Jaune Fromage */
@@ -17,6 +19,7 @@
 }
 
 body{
+  overflow-x: hidden;
   font-family: var(--font-Roboto);
   @apply text-secondary;
 }

@@ -3,6 +3,8 @@ import LastProducts from "../components/layout/LastProducts";
 import Product from "../components/layout/Product";
 import MenuList from "../components/layout/MenuList";
 import Event from "../components/layout/event";
+import Booking from "../components/layout/Booking";
+import Footer from "../components/layout/Footer";
 
 
 function HomePages() {
@@ -14,6 +16,8 @@ function HomePages() {
        <Product />
        <MenuList />
        <Event />
+       <Booking />
+       <Footer/>
     </>
   )
 }
