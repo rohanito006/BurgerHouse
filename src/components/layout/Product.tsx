@@ -11,7 +11,7 @@ function Product() {
                 toujours des délicieux burgers
             </HeadingTitle>
 
-            <Heading theme="secondary">
+            <Heading theme="secondary" >
                 choisissez et savourez
             </Heading>
 

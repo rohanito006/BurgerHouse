@@ -10,7 +10,7 @@ function HeroTop() {
         <div className="bg-primary w-full ">
            <div 
            style={{backgroundImage: `url(${bgFood})`}}
-           className="bg-bg-food w-full pb-29 bg-center bg-repeat ..."
+           className="bg-bg-food w-full pb-29 bg-center bg-repeat"
            >
             <Container>
                 < Header/>

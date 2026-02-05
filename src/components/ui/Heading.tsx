@@ -55,7 +55,7 @@ function Heading(props: HeadingProps) {
         return (
             <div className="flex justify-center items-center my-5">
 
-              <h2 className={`${theme === "secondary"? 'text-5xl':'text-2xl'} font-semibold ${classDefault} ${font} ${color}`}>
+              <h2 className={`${theme === "secondary"? 'text-xl md:text-5xl':'text-2xl'} font-semibold ${classDefault} ${font} ${color}`}>
                 {children}
               </h2>
 

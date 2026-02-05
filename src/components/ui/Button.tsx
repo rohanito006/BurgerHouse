@@ -34,7 +34,7 @@ function Button({ children, className, theme, color }: ButtonProps) {
         case 'big':
 
             return (
-          <button className={ ` font-Roboto px-8 py-4 text-base
+          <button className={ ` font-Roboto px-8 py-4 md:text-base
            text-white rounded-md  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold tracking-wider  ${className} ${background}`}>
               {children}
           </button>
