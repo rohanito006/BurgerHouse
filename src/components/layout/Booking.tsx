@@ -11,7 +11,7 @@ function Booking() {
             <div className="relative mb-20 ">
                 <img src={Burger} alt="un hamburger" className="absolute  -top-20 -left-36 z-10 "/>
                 <img src={Sauce} alt="sauce pimentée" className="absolute bottom-0 left-0"/>
-                <img src={Assiete} alt="une assiette de burger frites" className=" absolute -bottom-52 -right-96"/>
+                <img src={Assiete} alt="une assiette de burger frites" className=" absolute -bottom-52 -right-96 hidden md:block"/>
 
 
                 <div className="max-w-3xl mx-auto py-72  ">

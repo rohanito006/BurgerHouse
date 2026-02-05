@@ -43,8 +43,8 @@ function Button({ children, className, theme, color }: ButtonProps) {
     
         default:
             return (
-        <button className={ ` px-5 py-3 text-sm
-         text-white rounded-md  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold tracking-wider ${className} ${background}`}>
+        <button className={ ` px-5 py-3 text-xs
+         text-white rounded-md  uppercase shadow-lg hover:shadow-xl transition-all duration-50 font-semibold tracking-wider ${className} ${background} md:text-sm`}>
             {children}
         </button>
     );

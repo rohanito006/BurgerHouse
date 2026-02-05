@@ -53,13 +53,13 @@ function Footer() {
                 <div className="relative h-20 z-10 flex justify-between items-center">
                      <div className="uppercase font-extrabold tracking-tighter text-sm">© Burger House 2026. ALL RIGHTS RESERVED. </div>
                      <div className="flex justify-around items-center gap-2"> 
-                         <div>
-                          <img src={FacebookIcon} className="w-8" alt="" />
+                         <div className="rounded-md hover:bg-blue-200">
+                          <img src={FacebookIcon} className="w-8 " alt="" />
                          </div>
-                         <div>
+                         <div className="rounded-md hover:bg-blue-200">
                             <img src={InstagramIcon} className="w-8"  alt="" />
                          </div>
-                         <div>
+                         <div className="rounded-md hover:bg-blue-200" >
                             <img src={Whahtsapp} className="w-8" alt="" />
                          </div>
                      </div>
