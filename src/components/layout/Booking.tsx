@@ -14,7 +14,6 @@ function Booking() {
                 <img src={Sauce} alt="sauce pimentée" className="absolute bottom-0 left-0 w-20 md:w-auto hidden sm:block" />
                 <img src={Assiete} alt="une assiette de burger frites" className="absolute -bottom-52 -right-96 hidden lg:block" />
 
-                {/* CONTAINER : Réduction du padding vertical sur mobile (py-20 au lieu de py-72) */}
                     <div className="max-w-3xl mx-auto py-20 px-6 md:py-72">
                         <Heading variant="h3">
                             Réservation 
