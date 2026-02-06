@@ -54,61 +54,60 @@ function Event() {
 
   return (
     <Container>
-      <div className="relative shadow-2xl mb-20 overflow-hidden h-96 flex rounded-xl bg-white">
-
-        {/* TEXTE */}
-        <div className="w-1/2 flex flex-col justify-center items-center px-10 text-center">
-
-          <p>
-              {slides[currentIndex].category}
-          </p>
-
-          <h2 className="text-3xl md:text-4xl font-Alfa text-amber-800 mb-4">
-            {slides[currentIndex].title}
-          </h2>
-
-          <p className="text-lg md:text-xl text-gray-600">
-            {slides[currentIndex].text}
-          </p>
-        </div>
-
-        {/* IMAGE */}
-        <div className="relative w-1/2 overflow-hidden">
-          <div
-            className="flex h-full transition-transform duration-500 ease-in-out bg-amber-900"
-            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-          >
-            {slides.map((slide, index) => (
-              <div
-                key={index}
-                className="w-full h-full shrink-0 flex items-center justify-center"
+  
+        <div className="relative shadow-2xl mb-20 overflow-hidden flex flex-col md:flex-row md:h-96 rounded-xl bg-white ">
+          
+          {/* TEXTE : 'w-full' sur mobile, 'md:w-1/2' sur desktop */}
+                <div className="w-full md:w-1/2 flex flex-col justify-center items-center p-8 md:px-10 text-center order-2 md:order-1">
+                  <p className="uppercase tracking-widest text-sm text-gray-500 mb-2">
+                    {slides[currentIndex].category}
+                  </p>
+              
+                  <h2 className="text-2xl md:text-4xl font-Alfa text-amber-800 mb-4">
+                    {slides[currentIndex].title}
+                  </h2>
+              
+                  <p className="text-base md:text-xl text-gray-600">
+                    {slides[currentIndex].text}
+                  </p>
+                </div>
+          
+          {/* IMAGE : 'h-64' sur mobile pour éviter qu'elle disparaisse, 'md:h-full' sur desktop */}
+                <div className="relative w-full md:w-1/2 h-64 md:h-auto overflow-hidden order-1 md:order-2">
+                  <div
+                    className="flex h-full transition-transform duration-500 ease-in-out bg-amber-900"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                  >
+                    {slides.map((slide, index) => (
+                      <div
+                        key={index}
+                        className="w-full h-full shrink-0 flex items-center justify-center"
+                      >
+                        <img
+                          src={slide.image}
+                          alt={slide.title}
+                          className="w-full h-full object-cover object-center"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+                  
+          {/* BOUTONS : On les cache sur mobile ou on les ajuste pour qu'ils soient centrés verticalement */}
+              <button
+                onClick={prevSlide}
+                className="absolute top-1/2 left-2 md:left-4 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white w-10 h-10 flex items-center justify-center rounded-full transition-colors"
               >
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  className="w-full object-cover object-bottom "
-                />
-              </div>
-            ))}
-          </div>
+                ‹
+              </button>
+                  
+              <button
+                onClick={nextSlide}
+                className="absolute top-1/2 right-2 md:right-4 -translate-y-1/2 z-10 bg-black/40 hover:bg-black/60 text-white w-10 h-10 flex items-center justify-center rounded-full transition-colors"
+              >
+               ›
+             </button>
         </div>
-
-        {/* BOUTON GAUCHE */}
-        <button
-          onClick={prevSlide}
-          className="absolute top-1/2 left-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white px-3 py-2 rounded-full"
-        >
-          ‹
-        </button>
-
-        {/* BOUTON DROIT */}
-        <button
-          onClick={nextSlide}
-          className="absolute top-1/2 right-4 -translate-y-1/2 bg-black/40 hover:bg-black/60 text-white px-3 py-2 rounded-full"
-        >
-          ›
-        </button>
-      </div>
     </Container>
   );
 }

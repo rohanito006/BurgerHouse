@@ -19,9 +19,9 @@
 }
 
 body{
-  
+  overflow-x: hidden;
   font-family: var(--font-Roboto);
-  @apply text-secondary overflow-x: hidden;
+  @apply text-secondary;
 }
 
 p{
